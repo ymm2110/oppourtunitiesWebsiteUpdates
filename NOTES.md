@@ -14,12 +14,13 @@ Which opportunity you want to learn more about?
 
 other operations
 list - to list all opportunities
-exit - to exit the CLI 
+exit - to exit the CLI
 
 
 What is an opportunity
 
 an opportunity has a name
-an opportunity has a description
-an opportunity has an URL
+an opportunity has a deadline
 an opportunity has a posted date
+an opportunity has an URL
+an opportunity has a description
