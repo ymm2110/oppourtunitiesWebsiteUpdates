@@ -3,6 +3,7 @@
 class NewOpportunities::CLI
 
   def call
+    NewOpportunities::Opportunities.scrape
     puts "Scholarship and fellowship opportunities from http://oppourtunities.com"
     list_opportunities
     menu
@@ -10,10 +11,9 @@ class NewOpportunities::CLI
   end
 
   def list_opportunities
-
-    @opportunities = NewOpportunities::Opportunities.today
+    @opportunities = NewOpportunities::Opportunities.all
     @opportunities.each.with_index(1) do |opportunity, i|
-      puts "#{i}. #{opportunity.name} - #{opportunity.description} - #{opportunity.post_date}"
+      puts "#{i}. #{opportunity.name}"
     end
   end
 
@@ -25,7 +25,7 @@ class NewOpportunities::CLI
 
       if input.to_i >0
         the_opportunity = @opportunities[input.to_i - 1]
-        puts "#{the_opportunity.name} - #{the_opportunity.description} - #{the_opportunity.post_date}"
+        puts "#{the_opportunity.name} - #{the_opportunity.deadline} - #{the_opportunity.post_date}"
       elsif input == "list"
         list_opportunities
       else

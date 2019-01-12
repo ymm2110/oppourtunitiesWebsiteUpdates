@@ -1,27 +1,25 @@
 class NewOpportunities::Opportunities
 
-  attr_accessor :name, :url, :description, :post_date
+  attr_accessor :name, :url, :description, :post_date, :deadline
 
-  def self.today
-    # I should return a bunch of instances of Opportunities
-    self.scrape_opportunities
+  @opportunities = []
+
+  def self.all
+    @opportunities
   end
 
-  def self.scrape_opportunities
-    opportunities = []
-    opportunities << self.scrape
-    opportunities
-  end
 
   def self.scrape
     html = Nokogiri::HTML(open("http://oppourtunities.com/updates/"))
-    binding.pry
-  #   html.css("article.post").each.with_object([]) do |post, array|
-  # array << {
-  #   name:
-  #   description:
-  #   post_date:
-  #   url:
-  # }
+
+    html.css("article.post").each do |post|
+      opportunity = NewOpportunities::Opportunities.new
+      opportunity.name = post.css("h4 a").text.strip
+      opportunity.url = post.css("h4 a").attr("href").value
+      opportunity.description = post.css("p.eltdf-post-excerpt").text.strip.gsub("\r\n", " ")
+      opportunity.post_date = post.css(".entry-date a").text.strip
+      opportunity.deadline = opportunity.description.split(" ")[0..3].join(" ")
+      self.all << opportunity
     end
   end
+end
