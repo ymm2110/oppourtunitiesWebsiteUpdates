@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    new_opportunities (0.1.0)
+    new-opportunities (0.1.0)
       nokogiri
 
 GEM
@@ -22,7 +22,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.17)
-  new_opportunities!
+  new-opportunities!
   pry
   rake (~> 10.0)
 
