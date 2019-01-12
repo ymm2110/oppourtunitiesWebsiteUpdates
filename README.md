@@ -1,8 +1,8 @@
-# NewOpportunities
+# Scholarship and Fellowship Opportunities Scraper from oppourtunities.com
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/new_opportunities`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a Ruby Gem than scrapes the most recent scholarship and fellowship opportunities from oppourtunities.com.
 
-TODO: Delete this and the text above, and describe your gem
+Oppourtunities.com an Nigeria based non-profit organization. Founded in 2016 creates perfect bridge between opportunity provider and seekers thereby enabling youths get free, easy and instant access to all life changing opportunities. The forum wants to expose young people to the opportunities available across the continent and globe as well. Through the forum, many young people have been able to get their bearing thereby enabling them pursue their dreams through fully / partial funded scholarship, conference, grants and other opportunities. The forum was created in line with Sustainable Development Goal 4 (Quality Education) and 8 (Good Jobs and Economic Growth for a prosperous society. An organizational member of Sustainable Development Solution Network (SDSN) http://sdsnyouth.org/member-organizations/ 			
 
 ## Installation
 
@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To start, type in "new_opportunities"
+The gem will return a list of opportunities.
+
+Users can type in the opportunity's index number to know the application deadline and the posting date.
+To know the opportunity's description and url, type "more" or "url"
+
+User can type "list" at any time to see the list again, and type "exit" to exit. 
+
 
 ## Development
 
