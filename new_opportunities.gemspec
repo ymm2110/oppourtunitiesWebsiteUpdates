@@ -1,23 +1,23 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "new-opportunities/version"
+require "new_opportunities/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "new-opportunities"
+  spec.name          = "new_opportunities"
   spec.version       = NewOpportunities::VERSION
   spec.authors       = ["ymm2110"]
   spec.email         = ["yuntongman17@gmail.com"]
 
-  spec.summary       = %q{A command line interface for new scholarship and fellowship opportunities listed on http://oppourtunities.com}
-  spec.description   = %q{A command line interface for new scholarship and fellowship opportunities listed on http://oppourtunities.com}
+  spec.summary       = %q{A CLI for new scholarship and fellowship opportunities listed on http://oppourtunities.com}
+  spec.description   = %q{A CLI for new scholarship and fellowship opportunities listed on http://oppourtunities.com that will display the newest listings with the name, description, deadline, post date, and URL}
   spec.homepage      = "https://github.com/ymm2110/oppourtunitiesWebsiteUpdates"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "https://rubygems.org"
+    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "https://github.com/ymm2110/oppourtunitiesWebsiteUpdates"

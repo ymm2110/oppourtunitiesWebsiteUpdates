@@ -20,6 +20,7 @@ class NewOpportunities::CLI
   def menu
     input = nil
     while input != 'exit'
+      puts "Enter the number of the opportunity you'd like more info on, or type list, or type exit "
       input = gets.strip.downcase
 
       if input.to_i >0
@@ -33,11 +34,10 @@ class NewOpportunities::CLI
           puts "#{the_opportunity.url}"
           puts ""
         end
-        puts "#{the_opportunity.name} - #{the_opportunity.deadline} - #{the_opportunity.post_date}"
       elsif input == "list"
         list_opportunities
       else
-        puts "not sure what you want, type list of exit"
+        puts "not sure what you want, type list or exit"
       end
     end
   end

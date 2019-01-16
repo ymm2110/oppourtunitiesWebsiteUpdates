@@ -18,7 +18,7 @@ class NewOpportunities::Opportunities
       opportunity.url = post.css("h4 a").attr("href").value
       opportunity.description = post.css("p.eltdf-post-excerpt").text.strip.gsub("\r\n", " ")
       opportunity.post_date = post.css(".entry-date a").text.strip
-      opportunity.deadline = opportunity.description.split(" ")[0..3].join(" ")
+      opportunity.deadline = post.css("p.eltdf-post-excerpt").text.strip.gsub("\r\n", " ").split(" ")[0..3].join(" ")
       self.all << opportunity
     end
   end

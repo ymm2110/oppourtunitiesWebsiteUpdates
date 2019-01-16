@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "new-opportunities"
+require "new_opportunities"
 
 NewOpportunities::CLI.new.call
