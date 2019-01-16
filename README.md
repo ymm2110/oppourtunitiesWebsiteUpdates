@@ -18,7 +18,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install new_opportunities
+    $ gem install new-opportunities
 
 ## Usage
 
@@ -28,7 +28,7 @@ The gem will return a list of opportunities.
 Users can type in the opportunity's index number to know the application deadline and the posting date.
 To know the opportunity's description and url, type "more" or "url"
 
-User can type "list" at any time to see the list again, and type "exit" to exit. 
+User can type "list" at any time to see the list again, and type "exit" to exit.
 
 
 ## Development
